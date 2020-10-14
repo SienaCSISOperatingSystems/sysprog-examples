@@ -8,6 +8,7 @@
   CS 432, Fall 2006
 
   Updated February 2010, Mount Holyoke College, CS 322
+  Updated October 2020, Siena College, CSIS 330
 */
 
 #include <stdio.h>
@@ -19,6 +20,7 @@ int main() {
   int i = 27;
 
   printf("This program (pid=%d) will also magically become procinfo\n", getpid());
+  fflush(stdout);
   execvp("./procinfo", argv);
   printf("So this line never executes unless there's an error:\n");
   perror("execvp");

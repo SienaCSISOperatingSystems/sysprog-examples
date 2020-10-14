@@ -6,6 +6,7 @@
   CS 432, Spring 2005
 
   Updated, Spring 2008, Mount Holyoke College, CS 322
+  Updated, Fall 2020, Siena College, CSIS 330
 */
 
 #include <stdio.h>
@@ -14,6 +15,7 @@
 int main() {
 
   printf("This program (pid=%d) will magically become procinfo\n", getpid());
+  fflush(stdout);
   execlp("./procinfo", "heythisisnotprocinfo", "17", "-l", "Hey!", NULL);
   printf("So this line never executes unless there's an error:\n");
   perror("execlp");

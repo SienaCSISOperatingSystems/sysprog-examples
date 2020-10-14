@@ -4,6 +4,7 @@
   Jim Teresco, Williams College
 
   CS 432, Spring 2005
+  CSIS 330, Fall 2020, Siena College
 */
 
 #include <stdio.h>
@@ -34,6 +35,7 @@ int main(int argc, char *argv[]) {
 
   printf("This should be in the output file\n");
   printf("Now we will exec to do an ls -l\n");
+  fflush(stdout);
   execlp("ls", "ls", "-l", NULL);
   printf("So this line never executes unless there's an error:\n");
   perror("execlp");
