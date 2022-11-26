@@ -14,6 +14,8 @@
 #include <fcntl.h>
 #include <string.h>
 #include <unistd.h>
+#include <sys/types.h>
+#include <sys/wait.h>
 
 void usage(char *progname) {
   fprintf(stderr, "Usage: %s command1 [args] TO command2 [args]\n", progname);
