@@ -2,7 +2,7 @@
 # Makefile for pipe examples
 #
 
-PROGRAMS=pipe1 pipe2 pipeprocs
+PROGRAMS=pipe1 pipe2 pipeprocs pipefork
 
 all:	$(PROGRAMS)
 
@@ -14,6 +14,9 @@ pipe2:	pipe2.c
 
 pipeprocs:	pipeprocs.c
 	gcc -o pipeprocs pipeprocs.c
+
+pipefork:	pipefork.c
+	gcc -o pipefork pipefork.c
 
 clean::
 	/bin/rm -f $(PROGRAMS)
