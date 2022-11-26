@@ -2,12 +2,15 @@
   Simple communication through a named pipe (fifo)
 
   Jim Teresco, Fall 2002, Operating Systems, Williams College
+
+  Updated November 2022
 */  
   
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <fcntl.h>
+#include <unistd.h>
 
 char *text="Let's send this through a named pipe";
 

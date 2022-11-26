@@ -3,12 +3,14 @@
 
   Jim Teresco, Fall 2002, Operating Systems, Williams College
   Added more output, October 2006
+  Updated November 2022
 */  
   
 #include <stdio.h>
 #include <stdlib.h>
 #include <fcntl.h>
 #include <string.h>
+#include <unistd.h>
 
 void read_from_pipe() {
   int fd, size;

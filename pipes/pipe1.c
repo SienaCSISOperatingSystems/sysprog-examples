@@ -3,11 +3,13 @@
 
   Jim Teresco, Fall 2002, Operating Systems, Williams College
 
-  Updated March 2005
+  Updated March 2005, November 2022
+
 */
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <unistd.h>
 
 char *text="Let's send this through a pipe";
 
