@@ -11,6 +11,7 @@
 #include <stdlib.h>
 #include <sys/time.h>
 #include <math.h>
+#include <unistd.h>
 
 /* we make some variables global so they can be seen easily from
    the signal handler and the main program */
@@ -25,7 +26,7 @@ void sigFunc(int sig) {
   printf("sigFunc got signal: %d\n", sig);
   switch (sig) {
   case SIGALRM:
-    printf("Alarm!  Alarm!  %d got SIGALRM at time %d\n", getpid(),
+    printf("Alarm!  Alarm!  %d got SIGALRM at time %ld\n", getpid(),
 	   time(NULL)-start_time);
     printf("i=%d, j=%d, k=%d, ans=%f\n",i,j,k,ans);
     break;

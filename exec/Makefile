@@ -2,7 +2,7 @@
 # Makefile for exec example
 
 PROGRAMS=exec exec2 execwithargs execprocinfo procinfo execredir exec2nonull
-CC=gcc
+CC=clang
 CFLAGS=-Wall -g
 
 all:	$(PROGRAMS)

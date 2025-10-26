@@ -1,22 +1,22 @@
 #
 # Makefile for pipe examples
 #
-
+CC=clang
 PROGRAMS=pipe1 pipe2 pipeprocs pipefork
 
 all:	$(PROGRAMS)
 
 pipe1:	pipe1.c
-	gcc -o pipe1 pipe1.c
+	$(CC) -o pipe1 pipe1.c
 
 pipe2:	pipe2.c
-	gcc -o pipe2 pipe2.c
+	$(CC) -o pipe2 pipe2.c
 
 pipeprocs:	pipeprocs.c
-	gcc -o pipeprocs pipeprocs.c
+	$(CC) -o pipeprocs pipeprocs.c
 
 pipefork:	pipefork.c
-	gcc -o pipefork pipefork.c
+	$(CC) -o pipefork pipefork.c
 
 clean::
 	/bin/rm -f $(PROGRAMS)
